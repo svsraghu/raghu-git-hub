@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  docker-raghu-container:
+    image: docker-raghu:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/docker-raghu-container
+    ports:
+      - "9090:9090"
+
