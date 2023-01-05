@@ -1,0 +1,7 @@
+---
+releases:
+
+  - name: demochart
+    chart: ./demochart
+    installed: false 
+

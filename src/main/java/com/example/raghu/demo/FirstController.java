@@ -9,9 +9,17 @@ import ch.qos.logback.classic.Logger;
 @RestController
 public class FirstController  {
 	static Logger logger = (Logger) LoggerFactory.getLogger(DemoApplication.class);
-	@GetMapping("/hello")
-	public String hello() {
-		logger.debug("HELLO DEBUG RAGHU AGAIN. CHECK THIS ONCE");
-		return "HELLO RAGHU VARDHAN. THIS IS COMING FROM KUBERNETES CLUSTER";
+	
+	
+	@GetMapping("/raghu")
+	public String raghu() {
+		logger.debug("HELLO RAGHU AGAIN. YOU ARE ADMIN");
+		return "HELLO RAGHU VARDHAN. YOU ARE ADMIN";
+	}
+	
+	@GetMapping("/vardhan")
+	public String vardhan() {
+		logger.debug("HELLO VARDHAN. YOU ARE USER");
+		return "HELLO RAGHU VARDHAN. YOU ARE USER";
 	}
 }
